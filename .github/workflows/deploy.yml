@@ -103,7 +103,7 @@ jobs:
         uses: appleboy/ssh-action@v1.2.0
         env:
           EC2_IP: ${{ steps.get-ip.outputs.EC2_IP }}
-          MONGODB_URI: ${{ secrets.MONGODB_URI }}
+          MONGODB_URI: ${{ secrets.MONGODB_URI || secrets.MONGO_URI }}
           JWT_SECRET: ${{ secrets.JWT_SECRET }}
           CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
           CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
