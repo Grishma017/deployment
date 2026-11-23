@@ -1,0 +1,453 @@
+/* ==========================================================================
+   Swad User Panel Styles
+   Same design tokens as admin.css — consistent Swad brand identity
+   ========================================================================== */
+
+/* --- Auth pages (Register & Login) --- */
+.user-auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+  background-color: var(--canvas);
+}
+
+.user-auth-card {
+  width: 100%;
+  max-width: 460px;
+  background-color: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 40px 32px;
+  box-shadow: 0 10px 30px rgba(37, 42, 37, 0.06);
+}
+
+.user-auth-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.user-auth-header .brand {
+  margin-bottom: 10px;
+  display: inline-flex;
+}
+
+.user-badge {
+  display: inline-block;
+  background-color: var(--canvas);
+  color: var(--green);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  margin-bottom: 10px;
+}
+
+.user-auth-header h1 {
+  font-family: var(--serif);
+  font-size: 1.75rem;
+  color: var(--ink);
+  margin: 0 0 6px;
+}
+
+.user-auth-header p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.user-auth-switch {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.user-auth-switch button {
+  background: none;
+  border: none;
+  color: var(--red);
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0 2px;
+  text-decoration: underline;
+}
+
+/* --- User Dashboard Shell --- */
+.user-shell {
+  min-height: 100vh;
+  background-color: var(--canvas);
+  display: flex;
+  flex-direction: column;
+}
+
+.user-topbar {
+  background-color: var(--paper);
+  border-bottom: 1px solid var(--line);
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.user-topbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.user-topbar-tabs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  justify-content: center;
+}
+
+.user-tab-btn {
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+  cursor: pointer;
+  background: none;
+  color: var(--muted);
+  transition: all 0.15s;
+}
+
+.user-tab-btn:hover {
+  background-color: var(--canvas);
+  color: var(--ink);
+}
+
+.user-tab-btn.is-active {
+  background-color: var(--green);
+  color: #fff;
+  border-color: var(--green);
+}
+
+.user-topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-topbar-name {
+  font-size: 0.88rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.user-content {
+  padding: 32px 28px;
+  flex: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* --- User Recipe Grid --- */
+.user-recipes-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.user-recipes-header h2 {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  color: var(--ink);
+  margin: 0;
+}
+
+.user-recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.user-recipe-card {
+  background-color: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.user-recipe-card:hover {
+  box-shadow: 0 6px 20px rgba(37, 42, 37, 0.08);
+}
+
+.user-recipe-card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  background-color: var(--canvas);
+}
+
+.user-recipe-card-img-placeholder {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--canvas);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.user-recipe-card-body {
+  padding: 16px 18px;
+}
+
+.user-recipe-card-category {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--red);
+  margin-bottom: 4px;
+}
+
+.user-recipe-card-name {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 6px;
+}
+
+.user-recipe-card-desc {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0 0 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.user-recipe-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.user-recipe-card-actions {
+  display: flex;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+/* --- Recipe Form (User) --- */
+.user-recipe-form-wrap {
+  max-width: 820px;
+}
+
+.user-recipe-form-wrap h2 {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  color: var(--ink);
+  margin: 0 0 24px;
+}
+
+/* --- Image Upload Zone --- */
+.image-upload-zone {
+  border: 2px dashed var(--line);
+  border-radius: 8px;
+  padding: 28px;
+  text-align: center;
+  cursor: pointer;
+  background-color: var(--canvas);
+  transition: border-color 0.15s, background-color 0.15s;
+  position: relative;
+}
+
+.image-upload-zone:hover,
+.image-upload-zone.is-dragging {
+  border-color: var(--red);
+  background-color: #fef9f4;
+}
+
+.image-upload-zone input[type='file'] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.image-upload-zone-icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.image-upload-zone-text {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.image-upload-zone-text strong {
+  color: var(--red);
+}
+
+.image-upload-preview {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.image-upload-preview img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+
+.image-upload-preview-remove {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(37, 42, 37, 0.75);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-uploading-overlay {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--muted);
+  padding: 20px;
+  justify-content: center;
+}
+
+/* ─── User Empty State ─── */
+.user-empty-state {
+  text-align: center;
+  padding: 56px 24px;
+  color: var(--muted);
+}
+
+.user-empty-state h3 {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+/* ─── Buttons (user panel) ─── */
+.user-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 18px;
+  background-color: var(--green);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s;
+  text-decoration: none;
+}
+
+.user-btn-primary:hover { background-color: var(--green-dark); }
+.user-btn-primary:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.user-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background-color: var(--canvas);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.user-btn-secondary:hover { background-color: #ede5d7; }
+
+.user-btn-danger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background-color: #fbeeed;
+  color: var(--red);
+  border: 1px solid #f2cac5;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.user-btn-danger:hover { background-color: #f7dcd9; }
+
+.user-alert {
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.user-alert-error {
+  background-color: #fbeeed;
+  color: var(--red-dark);
+  border: 1px solid #f2cac5;
+}
+
+.user-alert-success {
+  background-color: #eaf3ed;
+  color: #1f5134;
+  border: 1px solid #c2e1cb;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 700px) {
+  .user-topbar { flex-wrap: wrap; padding: 12px 16px; }
+  .user-topbar-tabs { order: 3; width: 100%; justify-content: flex-start; gap: 4px; }
+  .user-content { padding: 20px 16px; }
+  .user-recipes-grid { grid-template-columns: 1fr; }
+  .user-recipe-form-wrap { max-width: 100%; }
+}

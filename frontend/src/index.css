@@ -1,0 +1,67 @@
+:root {
+  font-family: var(--sans);
+  color: #252a25;
+  background: #f5f0e7;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --canvas: #f5f0e7;
+  --paper: #fffcf6;
+  --ink: #252a25;
+  --muted: #6d7169;
+  --red: #b24432;
+  --red-dark: #8e3528;
+  --saffron: #d7a13a;
+  --green: #2e4339;
+  --green-dark: #22342d;
+  --line: #ded6c9;
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'Inter', 'Segoe UI', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  font-family: var(--sans);
+}
+
+button,
+input,
+a {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  color: #fffaf1;
+  background: var(--red);
+}
+
+:focus-visible {
+  outline: 2px solid var(--saffron);
+  outline-offset: 3px;
+}
