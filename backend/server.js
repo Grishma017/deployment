@@ -20,8 +20,10 @@ app.use(
     origin: function (origin, callback) {
       if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true)
+      } else if (process.env.NODE_ENV !== 'production') {
+        callback(null, true)
       } else {
-        callback(null, true) // Allow all in dev
+        callback(new Error('Origin is not allowed by CORS'))
       }
     },
     credentials: true,
